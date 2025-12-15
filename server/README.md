@@ -56,6 +56,18 @@ npm run build
 npm start
 ```
 
+### Database Scripts
+
+```bash
+# Seed database with initial unit data
+npm run seed
+
+# Reset database (clear all data) - Development only
+npm run reset
+```
+
+**Note:** The seed and reset scripts are ready to use once the Mongoose models are created (Task 2.1). Until then, they will display a placeholder message.
+
 ## Project Structure
 
 ```
@@ -81,23 +93,28 @@ server/
 ## API Endpoints
 
 ### Health
+
 - `GET /api/health` - Basic health check
 - `GET /api/health/ready` - Readiness probe with DB check
 
 ### Units (Coming Soon)
+
 - `GET /api/units` - List all units
 - `GET /api/units/:id` - Get unit details
 - `POST /api/units/:id/occupy` - Occupy a unit
 - `POST /api/units/:id/vacate` - Vacate a unit
 
 ### Tenants (Coming Soon)
+
 - `GET /api/tenants` - List all tenants
 - `GET /api/tenants/:id` - Get tenant details
 
 ### Payments (Coming Soon)
+
 - `GET /api/payments/late` - Get late payments
 
 ### Dashboard (Coming Soon)
+
 - `GET /api/dashboard/summary` - Get dashboard metrics
 
 ## Environment Variables

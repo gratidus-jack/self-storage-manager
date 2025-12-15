@@ -27,12 +27,12 @@
 ---
 
 ### Task 1.3: Set Up MongoDB Connection
-- [ ] Install Mongoose in server package
-- [ ] Create database configuration module with connection handling
-- [ ] Implement connection retry logic with exponential backoff
-- [ ] Add graceful shutdown handling for database connections
-- [ ] Create environment variable schema with validation (using zod or joi)
-- [ ] Add seed script for initial unit data
+- [x] Install Mongoose in server package
+- [x] Create database configuration module with connection handling
+- [x] Implement connection retry logic with exponential backoff
+- [x] Add graceful shutdown handling for database connections
+- [x] Create environment variable schema with validation (using zod or joi)
+- [x] Add seed script for initial unit data
 
 **Expected Outcome:** Server connects to MongoDB on startup with proper error handling
 
