@@ -19,8 +19,8 @@
 - [x] Configure React-specific ESLint rules for client
 - [x] Configure Node.js-specific ESLint rules for server
 - [x] Set up Prettier with consistent formatting rules
-- [-] Add pre-commit hooks with Husky and lint-staged
-- [ ] Create `.editorconfig` for IDE consistency
+- [x] Add pre-commit hooks with Husky and lint-staged
+- [x] Create `.editorconfig` for IDE consistency
 
 **Expected Outcome:** Linting runs on save and pre-commit, consistent code style enforced
 
