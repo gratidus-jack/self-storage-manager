@@ -1,0 +1,37 @@
+export interface ApiSuccessResponse<T> {
+  success: true;
+  data: T;
+}
+
+export interface ApiCollectionResponse<T> {
+  success: true;
+  data: T[];
+  pagination?: PaginationMetadata;
+}
+
+export interface PaginationMetadata {
+  page: number;
+  limit: number;
+  total: number;
+  totalPages: number;
+}
+
+export interface ApiErrorResponse {
+  success: false;
+  error: {
+    code: string;
+    message: string;
+    details?: Array<{
+      field: string;
+      message: string;
+    }>;
+  };
+}
+
+export type ApiResponse<T> = ApiSuccessResponse<T> | ApiErrorResponse;
+
+export interface HealthResponse {
+  status: 'ok' | 'error';
+  timestamp: string;
+  database?: 'connected' | 'disconnected';
+}
