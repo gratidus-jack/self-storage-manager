@@ -39,24 +39,24 @@
 ---
 
 ### Task 1.4: Configure Redux Store
-- [ ] Install Redux Toolkit and React-Redux
-- [ ] Create store configuration with proper TypeScript typing
-- [ ] Set up RTK Query API slice with base configuration
-- [ ] Create typed hooks (useAppDispatch, useAppSelector)
-- [ ] Configure Redux DevTools for development
-- [ ] Add store provider to React app entry point
+- [x] Install Redux Toolkit and React-Redux
+- [x] Create store configuration with proper TypeScript typing
+- [x] Set up RTK Query API slice with base configuration
+- [x] Create typed hooks (useAppDispatch, useAppSelector)
+- [x] Configure Redux DevTools for development
+- [x] Add store provider to React app entry point
 
 **Expected Outcome:** Redux store initialized with DevTools visible, typed hooks available
 
 ---
 
 ### Task 1.5: Docker Configuration
-- [ ] Create Dockerfile for React frontend (multi-stage build)
-- [ ] Create Dockerfile for Node.js backend
-- [ ] Create docker-compose.yml for local development
-- [ ] Add MongoDB service to docker-compose
-- [ ] Create docker-compose.prod.yml for production
-- [ ] Add .dockerignore files
+- [x] Create Dockerfile for React frontend (multi-stage build)
+- [x] Create Dockerfile for Node.js backend
+- [x] Create docker-compose.yml for local development
+- [x] Add MongoDB service to docker-compose
+- [x] Create docker-compose.prod.yml for production
+- [x] Add .dockerignore files
 
 **Expected Outcome:** `docker-compose up` starts full stack locally
 

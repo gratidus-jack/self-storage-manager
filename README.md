@@ -95,11 +95,61 @@ CLIENT_URL=http://localhost:3000
 
 ## Docker
 
+### Development
+
 Run the full stack with Docker Compose:
 
 ```bash
 docker-compose up
 ```
+
+Stop and remove containers:
+
+```bash
+docker-compose down
+```
+
+### Production
+
+The production setup uses pre-built Docker images from GitHub Container Registry and connects to MongoDB Atlas.
+
+1. Copy the production environment template:
+
+```bash
+cp .env.production.example .env.production
+```
+
+2. Edit `.env.production` with your actual values:
+   - `GITHUB_REPOSITORY`: Your GitHub repository (e.g., `username/storage-manager`)
+   - `IMAGE_TAG`: Docker image tag (e.g., `latest`, `v1.0.0`, or commit SHA)
+   - `MONGODB_URI`: MongoDB Atlas connection string
+   - `CLIENT_URL`: Your production frontend URL
+
+3. Deploy with production compose file:
+
+```bash
+docker-compose -f docker-compose.prod.yml --env-file .env.production up -d
+```
+
+4. View logs:
+
+```bash
+docker-compose -f docker-compose.prod.yml logs -f
+```
+
+5. Stop production deployment:
+
+```bash
+docker-compose -f docker-compose.prod.yml down
+```
+
+**Note**: The production configuration:
+
+- Uses pre-built images from GitHub Container Registry
+- Connects to external MongoDB Atlas (no local MongoDB container)
+- Includes resource limits and security hardening
+- Enables automatic restarts
+- Implements log rotation
 
 ## Features
 
@@ -111,6 +161,7 @@ docker-compose up
 ## Tech Stack
 
 ### Frontend
+
 - React 18
 - Redux Toolkit + RTK Query
 - React Router v6
@@ -118,12 +169,14 @@ docker-compose up
 - TypeScript
 
 ### Backend
+
 - Node.js 20
 - Express.js
 - MongoDB + Mongoose
 - TypeScript
 
 ### DevOps
+
 - Docker
 - GitHub Actions
 - Vitest
